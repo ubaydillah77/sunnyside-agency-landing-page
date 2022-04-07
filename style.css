@@ -1,0 +1,216 @@
+:root {
+    /* ### Primary */
+    --soft-red: 254, 120, 103;
+    --yellow: 250, 212, 0;
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+
+    /* ### Neutral */
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: rgb(255, 255, 255);
+    --white-base: 255, 255, 255;
+    --black: #000;
+
+    --font-header: "Fraunces", serif;
+    --font-body: "Barlow", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: #000;
+}
+
+.wrapper {
+    width: 1440px;
+    margin: auto;
+}
+
+/* ========================================== HEADER ========================================= */
+
+.header {
+    height: 95vh;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+
+    padding: 2.3rem 2.8rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    min-width: 150px;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+    /* justify-content: ; */
+}
+
+.navbar__item {
+    list-style: none;
+    margin-left: 3rem;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navbar__link.button {
+    font-family: var(--font-header);
+    color: var(--very-dark-desaturated-blue);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(var(--white-base), 1);
+    padding: 1rem 1.6rem;
+    border-radius: 40px;
+    transition: all 0.2s ease-in;
+}
+
+.navbar__link.button:hover {
+    background-color: rgba(var(--white-base), 0.2);
+
+    color: var(--white);
+}
+
+.header__content {
+    margin-top: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header__title {
+    font-family: var(--font-header);
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 5rem;
+}
+
+/* ========================================== SERVICE ========================================= */
+.main {
+    background-color: var(--white);
+}
+
+.service {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 567px);
+}
+
+.service__item {
+    background-color: var(--white);
+    padding: 8rem 7rem 4rem 10rem;
+}
+
+.service__image--1 {
+    background-image: url(./images/desktop/image-transform.jpg);
+    background-position: center;
+}
+
+.service__image--2 {
+    background-image: url(./images/desktop/image-stand-out.jpg);
+    background-position: center;
+}
+
+.service__image--3 {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    display: flex;
+    flex-direction: column;
+}
+
+.service__image--4 {
+    background-image: url(./images/desktop/image-photography.jpg);
+    display: flex;
+    flex-direction: column;
+}
+
+.service__title {
+    font-family: var(--font-header);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.service__text {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--dark-grayish-blue);
+}
+
+.service__link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    color: var(--very-dark-desaturated-blue);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 4;
+}
+
+.service__link::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgba(var(--yellow), 0.3);
+    left: 0;
+    bottom: -4px;
+    z-index: 5;
+}
+
+.service__link.red::after {
+    background-color: rgba(var(--soft-red), 0.3);
+}
+
+.service__title--2 {
+    margin-top: auto;
+    text-align: center;
+    font-family: var(--font-header);
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: var(--dark-desaturated-cyan);
+}
+
+.service__text--2 {
+    text-align: center;
+    padding: 1.6rem 2rem 1rem;
+    line-height: 1.5;
+    color: var(--dark-desaturated-cyan);
+}
+
+/* ========================================== TESTIMONIALS ========================================= */
